@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Edit2, Trash2, BookOpen, Package, Sparkles } from 'lucide-react';
 import { bookApi } from '../api/bookApi';
-import {  CategoryApi } from '../api/ CategoryApi';
+import { CategoryApi } from '../api/CategoryApi';
 import Modal from '../components/common/Modal';
 import SearchBar from '../components/common/SearchBar';
 import Loading from '../components/common/Loading';
@@ -41,7 +41,7 @@ const Books = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await  CategoryApi.getAll();
+      const response = await CategoryApi.getAll();
       setCategories(response.data.data);
     } catch (error) {
       console.error('Erreur lors du chargement des catégories:', error);

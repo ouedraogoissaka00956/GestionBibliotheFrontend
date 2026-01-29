@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FolderTree, Check } from 'lucide-react';
-import {  CategoryApi } from '../api/ CategoryApi';
+import { CategoryApi } from '../api/CategoryApi';
 import Loading from '../components/common/Loading';
 
 // Liste fixe de catégories disponibles
@@ -34,7 +34,7 @@ const Categories = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await  CategoryApi.getAll();
+      const response = await CategoryApi.getAll();
       const userCategories = response.data.data;
       setCategories(userCategories);
       
@@ -54,7 +54,7 @@ const Categories = () => {
         // Supprimer la catégorie
         const catToDelete = categories.find(c => c.name === category.name);
         if (catToDelete) {
-          await  CategoryApi.delete(catToDelete._id);
+          await CategoryApi.delete(catToDelete._id);
           const newSelected = new Set(selectedCategories);
           newSelected.delete(category.name);
           setSelectedCategories(newSelected);
@@ -62,7 +62,7 @@ const Categories = () => {
         }
       } else {
         // Ajouter la catégorie
-        const response = await  CategoryApi.create({
+        const response = await CategoryApi.create({
           name: category.name,
           description: category.description
         });

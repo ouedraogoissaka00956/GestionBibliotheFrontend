@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { bookApi } from '../api/bookApi';
 import { memberApi } from '../api/memberApi';
 import { loanApi } from '../api/loanApi';
-import {  CategoryApi } from '../api/ CategoryApi';
+import { CategoryApi } from '../api/CategoryApi';
 import { BookIcon, UserIcon, CalendarIcon, AlertIcon, TrendingIcon, CategoryIcon } from '../components/common/CustomIcons';
 import Loading from '../components/common/Loading';
 
@@ -28,7 +28,7 @@ const Dashboard = () => {
         bookApi.getAll(),
         memberApi.getAll(),
         loanApi.getAll(),
-         CategoryApi.getAll(),
+        CategoryApi.getAll(),
       ]);
 
       const books = booksRes.data.data;
