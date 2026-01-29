@@ -1,6 +1,8 @@
 // ============================================
 // src/api/categoryApi.js
 // ============================================
+
+// Import the configured axios instance
 import api from './axios';
 
 export const categoryApi = {
