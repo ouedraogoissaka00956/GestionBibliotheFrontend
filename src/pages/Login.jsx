@@ -123,13 +123,6 @@ const Login = () => {
             </p>
           </div>
         </div>
-
-        <div className="mt-6 text-center">
-          <div className="bg-white/20 backdrop-blur-lg rounded-2xl p-4 border border-white/30">
-            <p className="text-sm text-white font-medium mb-2"> Compte de test</p>
-            <p className="text-xs text-blue-100">admin@library.com / admin123</p>
-          </div>
-        </div>
       </div>
     </div>
   );
